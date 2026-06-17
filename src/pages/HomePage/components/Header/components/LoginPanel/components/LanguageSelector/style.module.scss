@@ -1,0 +1,96 @@
+.wrapper {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  font-size: 1.2rem;
+
+  &:hover {
+    background: var(--accent);
+  }
+}
+
+.chevron {
+  color: var(--muted-foreground);
+  transition: transform 0.2s;
+}
+
+.chevronOpen {
+  color: var(--muted-foreground);
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px;
+  list-style: none;
+  margin: 0;
+  min-width: 90px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--foreground);
+  transition: background 0.15s;
+
+  &:hover {
+    background: var(--accent);
+  }
+}
+
+.optionActive {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.flagsRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flagBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 4px;
+  border-radius: 6px;
+  opacity: 0.45;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.flagBtnActive {
+  opacity: 1;
+}
