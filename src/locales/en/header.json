@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "menuAndPromotions": "Menu & Promotions",
+    "locations": "Locations",
+    "trackOrder": "Track Order",
+    "blog": "Blog",
+    "work": "Jobs",
+    "contact": "Contact"
+  },
+  "login": "LOG IN",
+  "actions": {
+    "favorites": "Favorites",
+    "cart": "Cart"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "menuAndPromotions": "Menu i Promocje",
+    "locations": "Lokale",
+    "trackOrder": "Śledź zamówienie",
+    "blog": "Blog",
+    "work": "Praca",
+    "contact": "Kontakt"
+  },
+  "login": "ZALOGUJ SIĘ",
+  "actions": {
+    "favorites": "Ulubione",
+    "cart": "Koszyk"
+  }
+}

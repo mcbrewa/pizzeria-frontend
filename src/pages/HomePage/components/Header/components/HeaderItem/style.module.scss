@@ -1,0 +1,24 @@
+@use 'breakpoints' as *;
+
+.link {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 4px 0;
+  transition: color 0.15s ease;
+
+  @include xl {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.linkActive {
+  color: var(--primary);
+}

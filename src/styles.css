@@ -1,0 +1,25 @@
+
+@import "tailwindcss";
+
+:root {
+  --primary: #0077bd;
+  --primary-dark: #005a8e;
+  --danger: #e31837;
+  --text: #333333;
+  --background: #ffffff;
+  --border: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}

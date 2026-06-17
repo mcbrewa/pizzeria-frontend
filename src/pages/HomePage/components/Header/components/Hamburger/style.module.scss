@@ -1,0 +1,17 @@
+@use 'breakpoints' as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--text);
+  margin-left: auto;
+
+  @include lg {
+    display: none;
+  }
+}
