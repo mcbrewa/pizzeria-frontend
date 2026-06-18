@@ -9,7 +9,7 @@
 > Tam jest pełna specyfikacja techniczna podzielona na iteracje. Ten plik to tylko przegląd.
 
 ## Status
-In Progress
+Not Started
 
 ## Feature: OrderPanel — boczny panel zamówień na HomePage
 
@@ -726,3 +726,6 @@ Slider promocji na HomePage. 6 slajdów, auto-advance 5s, strzałki, dots-indica
 
 ### LoginPanel — 2026-06-17
 Header action panel: LoginButton (modal stub), LanguageSelector (PL/EN/DE, i18n.changeLanguage), FavoritesButton, CartButton. Mobile drawer z nawigacją i przełącznikiem języka. Zmergowane do main.
+
+### OrderPanel — 2026-06-18
+Panel zamówień na HomePage. Desktop: stała prawa kolumna (grid 1fr 380px). Mobile: drawer z lewej (translateX, 85vw). TabSwitcher z emoji (🛵/🏪), DeliveryForm i PickupForm (FormField + i18n PL/EN/DE). useAuth stub. Fix animacji przy resize (useResizeTransitionBlock + html.no-transitions). Zmergowane do main.
