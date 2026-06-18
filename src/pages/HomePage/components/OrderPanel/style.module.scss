@@ -1,0 +1,86 @@
+.panel {
+  background: #fff;
+  padding: 1.5rem;
+
+  @media (max-width: 1023px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 85vw;
+    max-width: 400px;
+    z-index: 200;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: 1024px) {
+    position: static;
+    transform: none;
+    height: auto;
+    box-shadow: none;
+    border-left: 1px solid var(--border);
+  }
+}
+
+.panelOpen {
+  @media (max-width: 1023px) {
+    transform: translateX(0);
+  }
+}
+
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+}
+
+.mobileTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #006491;
+  letter-spacing: 0.05em;
+}
+
+.desktopHeader {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+}
+
+.greeting {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--text);
+}
+
+.orderOnline {
+  font-weight: 700;
+  color: #006491;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+}

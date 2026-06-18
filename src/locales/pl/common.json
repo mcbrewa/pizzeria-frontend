@@ -16,5 +16,34 @@
     "prevButton": "Poprzednia promocja",
     "nextButton": "Następna promocja",
     "goToSlide": "Przejdź do slajdu {{n}}"
+  },
+  "homePage": {
+    "cta": {
+      "orderOnline": "ZAMÓW ONLINE",
+      "menuAndPromos": "MENU I PROMOCJE"
+    }
+  },
+  "orderPanel": {
+    "back": "Wróć",
+    "greeting": "Witaj {{name}}!",
+    "orderOnline": "ZAMÓW ONLINE",
+    "tabs": {
+      "delivery": "Dostawa",
+      "pickup": "Odbiór osobisty"
+    },
+    "fields": {
+      "city": "Miasto",
+      "street": "Ulica",
+      "houseNumber": "Numer domu",
+      "apartmentNumber": "Numer mieszkania"
+    },
+    "actions": {
+      "next": "DALEJ",
+      "findStore": "ZNAJDŹ LOKAL",
+      "findOnMap": "WYBIERZ LOKAL NA MAPIE"
+    },
+    "pickup": {
+      "subtitle": "Podaj adres, a znajdziemy najbliższy lokal:"
+    }
   }
 }

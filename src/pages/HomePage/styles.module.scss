@@ -1,0 +1,13 @@
+.page {
+  display: block;
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    align-items: start;
+  }
+}
+
+.mainArea {
+  min-width: 0;
+}
