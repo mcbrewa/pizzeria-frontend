@@ -11,5 +11,39 @@
   "actions": {
     "favorites": "Favoriten",
     "cart": "Warenkorb"
+  },
+  "gallery": {
+    "prevButton": "Vorherige Aktion",
+    "nextButton": "Nächste Aktion",
+    "goToSlide": "Zu Folie {{n}} wechseln"
+  },
+  "homePage": {
+    "cta": {
+      "orderOnline": "ONLINE BESTELLEN",
+      "menuAndPromos": "MENÜ & AKTIONEN"
+    }
+  },
+  "orderPanel": {
+    "back": "Zurück",
+    "greeting": "Willkommen {{name}}!",
+    "orderOnline": "ONLINE BESTELLEN",
+    "tabs": {
+      "delivery": "Lieferung",
+      "pickup": "Abholung"
+    },
+    "fields": {
+      "city": "Stadt",
+      "street": "Straße",
+      "houseNumber": "Hausnummer",
+      "apartmentNumber": "Wohnungsnummer"
+    },
+    "actions": {
+      "next": "WEITER",
+      "findStore": "FILIALE FINDEN",
+      "findOnMap": "AUF DER KARTE WÄHLEN"
+    },
+    "pickup": {
+      "subtitle": "Gib deine Adresse ein und wir finden die nächste Filiale:"
+    }
   }
 }

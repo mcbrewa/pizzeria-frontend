@@ -23,3 +23,7 @@ body,
 body {
   margin: 0;
 }
+
+html.no-transitions * {
+  transition: none !important;
+}

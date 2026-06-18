@@ -11,5 +11,39 @@
   "actions": {
     "favorites": "Favorites",
     "cart": "Cart"
+  },
+  "gallery": {
+    "prevButton": "Previous promotion",
+    "nextButton": "Next promotion",
+    "goToSlide": "Go to slide {{n}}"
+  },
+  "homePage": {
+    "cta": {
+      "orderOnline": "ORDER ONLINE",
+      "menuAndPromos": "MENU & PROMOTIONS"
+    }
+  },
+  "orderPanel": {
+    "back": "Back",
+    "greeting": "Welcome {{name}}!",
+    "orderOnline": "ORDER ONLINE",
+    "tabs": {
+      "delivery": "Delivery",
+      "pickup": "Pickup"
+    },
+    "fields": {
+      "city": "City",
+      "street": "Street",
+      "houseNumber": "House number",
+      "apartmentNumber": "Apartment number"
+    },
+    "actions": {
+      "next": "NEXT",
+      "findStore": "FIND STORE",
+      "findOnMap": "SELECT ON MAP"
+    },
+    "pickup": {
+      "subtitle": "Enter your address and we'll find the nearest location:"
+    }
   }
 }
