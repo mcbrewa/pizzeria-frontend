@@ -11,5 +11,10 @@
   "actions": {
     "favorites": "Favoriten",
     "cart": "Warenkorb"
+  },
+  "gallery": {
+    "prevButton": "Vorherige Aktion",
+    "nextButton": "Nächste Aktion",
+    "goToSlide": "Zu Folie {{n}} wechseln"
   }
 }

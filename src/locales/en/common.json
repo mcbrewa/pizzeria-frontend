@@ -11,5 +11,10 @@
   "actions": {
     "favorites": "Favorites",
     "cart": "Cart"
+  },
+  "gallery": {
+    "prevButton": "Previous promotion",
+    "nextButton": "Next promotion",
+    "goToSlide": "Go to slide {{n}}"
   }
 }

@@ -1,8 +1,18 @@
+@use 'breakpoints' as *;
+
 .link {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   text-decoration: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include xl {
+    position: static;
+    transform: none;
+  }
 }
 
 .img {

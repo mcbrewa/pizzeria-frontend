@@ -1,7 +1,10 @@
+import PromotionsGallery from './components/PromotionsGallery'
+import { PROMOTIONS } from './data'
+
 const HomePage = () => {
   return (
     <div>
-      <p>HomePage</p>
+      <PromotionsGallery promotions={PROMOTIONS} />
     </div>
   )
 }

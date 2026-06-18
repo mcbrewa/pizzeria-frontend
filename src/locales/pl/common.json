@@ -11,5 +11,10 @@
   "actions": {
     "favorites": "Ulubione",
     "cart": "Koszyk"
+  },
+  "gallery": {
+    "prevButton": "Poprzednia promocja",
+    "nextButton": "Następna promocja",
+    "goToSlide": "Przejdź do slajdu {{n}}"
   }
 }

@@ -172,6 +172,41 @@ Domyślnie bez komentarzy. Dodajemy tylko gdy WHY jest nieoczywiste — ukryte o
 
 ---
 
+## i18n (react-i18next)
+
+Projekt obsługuje 3 języki: `pl` (domyślny), `en`, `de`. Jeden namespace: `common`.
+
+### Zasady
+
+- **Każdy hardcoded string w UI wymaga tłumaczenia** — etykiety, aria-labels, placeholder, komunikaty, tekst przycisków
+- Klucze dodawać do **wszystkich 3 plików** jednocześnie: `src/locales/pl/common.json`, `en/common.json`, `de/common.json`
+- Struktury kluczy zagnieżdżamy per sekcja/komponent: `"gallery.prevButton"`, `"nav.contact"`, itd.
+
+### Użycie
+
+```tsx
+import { useTranslation } from 'react-i18next'
+
+const MyComponent = () => {
+  const { t } = useTranslation('common')
+
+  return (
+    <button aria-label={t('gallery.prevButton')}>
+      {t('actions.cart')}
+    </button>
+  )
+}
+```
+
+Interpolacja zmiennych: `t('gallery.goToSlide', { n: i + 1 })` → klucz: `"goToSlide": "Przejdź do slajdu {{n}}"`.
+
+### Co NIE wymaga tłumaczenia
+
+- Treści danych dynamicznych (tytuły, opisy) pobieranych z API — API zwraca je per język
+- Placeholder dane statyczne (`data.ts`) które zostaną zastąpione przez API
+
+---
+
 ## Routing (TanStack Router — file-based)
 
 | Plik | Route |
