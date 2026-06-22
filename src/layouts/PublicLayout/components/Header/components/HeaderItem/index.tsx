@@ -3,9 +3,20 @@ import { useTranslation } from 'react-i18next'
 import style from './style.module.scss'
 import type { HeaderItemProps } from './types'
 
-const HeaderItem = ({ translationKey, to, onClick, variant = 'nav' }: HeaderItemProps) => {
+const HeaderItem = ({ translationKey, to, disabled, onClick, variant = 'nav' }: HeaderItemProps) => {
   const { t } = useTranslation('common')
   const isDrawerVariant = variant === 'drawer'
+
+  if (disabled) {
+    return (
+      <li>
+        <span className={isDrawerVariant ? style.drawerLinkDisabled : style.linkDisabled}>
+          {t(translationKey)}
+        </span>
+      </li>
+    )
+  }
+
   return (
     <li>
       <Link

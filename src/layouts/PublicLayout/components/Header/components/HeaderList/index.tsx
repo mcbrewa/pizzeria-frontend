@@ -6,7 +6,7 @@ const HeaderList = () => {
   return (
     <ul className={style.list}>
       {NAV_ITEMS.map((item) => (
-        <HeaderItem key={item.key} translationKey={item.key} to={item.to} />
+        <HeaderItem key={item.key} translationKey={item.key} to={item.to} disabled={item.disabled} />
       ))}
     </ul>
   )

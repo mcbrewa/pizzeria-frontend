@@ -54,6 +54,7 @@ const Hamburger = () => {
                 key={item.key}
                 translationKey={item.key}
                 to={item.to}
+                disabled={item.disabled}
                 variant="drawer"
                 onClick={close}
               />

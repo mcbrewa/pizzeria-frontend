@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PublicRouteImport } from './routes/_public'
 import { Route as PublicIndexRouteImport } from './routes/_public/index'
 import { Route as PublicWelcomeRouteImport } from './routes/_public/welcome'
+import { Route as PublicSplatRouteImport } from './routes/_public/$'
 
 const PublicRoute = PublicRouteImport.update({
   id: '/_public',
@@ -27,27 +28,35 @@ const PublicWelcomeRoute = PublicWelcomeRouteImport.update({
   path: '/welcome',
   getParentRoute: () => PublicRoute,
 } as any)
+const PublicSplatRoute = PublicSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => PublicRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof PublicIndexRoute
+  '/$': typeof PublicSplatRoute
   '/welcome': typeof PublicWelcomeRoute
 }
 export interface FileRoutesByTo {
+  '/$': typeof PublicSplatRoute
   '/welcome': typeof PublicWelcomeRoute
   '/': typeof PublicIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_public': typeof PublicRouteWithChildren
+  '/_public/$': typeof PublicSplatRoute
   '/_public/welcome': typeof PublicWelcomeRoute
   '/_public/': typeof PublicIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/welcome'
+  fullPaths: '/' | '/$' | '/welcome'
   fileRoutesByTo: FileRoutesByTo
-  to: '/welcome' | '/'
-  id: '__root__' | '/_public' | '/_public/welcome' | '/_public/'
+  to: '/$' | '/welcome' | '/'
+  id: '__root__' | '/_public' | '/_public/$' | '/_public/welcome' | '/_public/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,15 +86,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PublicWelcomeRouteImport
       parentRoute: typeof PublicRoute
     }
+    '/_public/$': {
+      id: '/_public/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof PublicSplatRouteImport
+      parentRoute: typeof PublicRoute
+    }
   }
 }
 
 interface PublicRouteChildren {
+  PublicSplatRoute: typeof PublicSplatRoute
   PublicWelcomeRoute: typeof PublicWelcomeRoute
   PublicIndexRoute: typeof PublicIndexRoute
 }
 
 const PublicRouteChildren: PublicRouteChildren = {
+  PublicSplatRoute: PublicSplatRoute,
   PublicWelcomeRoute: PublicWelcomeRoute,
   PublicIndexRoute: PublicIndexRoute,
 }
