@@ -7,6 +7,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
+  preview: {
+    allowedHosts: ['pizza.mcbrewa.pl', 'www.pizza.mcbrewa.pl'],
+  },
   server: {
     proxy: {
       '/api-auth': {
