@@ -1,8 +1,6 @@
-export interface AuthUser {
-  firstName: string
-  email: string
-}
+import { useAuthContext } from '#/contexts/AuthContext'
+import type { AuthPermission, AuthRole, AuthUser } from '#/types/auth'
 
-export const useAuth = (): { user: AuthUser | null } => {
-  return { user: null }
-}
+export type { AuthUser, AuthRole, AuthPermission }
+
+export const useAuth = () => useAuthContext()

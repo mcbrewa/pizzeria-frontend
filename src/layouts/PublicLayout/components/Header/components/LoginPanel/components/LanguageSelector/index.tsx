@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { LANGUAGES } from '../../data'
+import { LANG_STORAGE_KEY } from '#/lib/i18n'
 import type { LanguageSelectorProps } from './types'
 import style from './style.module.scss'
 
@@ -18,6 +19,7 @@ const LanguageSelector = ({ variant = 'dropdown' }: LanguageSelectorProps) => {
 
   const handleSelect = (code: (typeof LANGUAGES)[number]['code']) => {
     i18n.changeLanguage(code)
+    localStorage.setItem(LANG_STORAGE_KEY, code)
     setIsOpen(false)
   }
 

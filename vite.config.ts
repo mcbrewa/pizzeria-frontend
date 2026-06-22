@@ -7,6 +7,17 @@ import tailwindcss from '@tailwindcss/vite'
 
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
+  server: {
+    proxy: {
+      '/api-auth': {
+        target: 'http://localhost:5000',
+        rewrite: (path) => path.replace('/api-auth', '/api'),
+      },
+      '/api': {
+        target: 'http://localhost:5001',
+      },
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {

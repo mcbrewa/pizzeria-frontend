@@ -8,6 +8,7 @@
     "contact": "Contact"
   },
   "login": "LOG IN",
+  "logout": "LOG OUT",
   "actions": {
     "favorites": "Favorites",
     "cart": "Cart"

@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import styles from './style.module.scss'
 import type { FormFieldProps } from './types'
 
-const FormField = ({ label, name, value, onChange, required, placeholder, className }: FormFieldProps) => (
+const FormField = ({ label, name, type = 'text', value, onChange, required, placeholder, className }: FormFieldProps) => (
   <div className={clsx(styles.field, className)}>
     <label htmlFor={name} className={styles.label}>
       {label}
@@ -11,7 +11,7 @@ const FormField = ({ label, name, value, onChange, required, placeholder, classN
     <input
       id={name}
       name={name}
-      type="text"
+      type={type}
       value={value}
       onChange={e => onChange(e.target.value)}
       placeholder={placeholder}

@@ -8,6 +8,7 @@
     "contact": "Kontakt"
   },
   "login": "ANMELDEN",
+  "logout": "ABMELDEN",
   "actions": {
     "favorites": "Favoriten",
     "cart": "Warenkorb"
