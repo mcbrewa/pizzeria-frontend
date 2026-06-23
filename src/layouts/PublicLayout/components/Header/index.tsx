@@ -9,13 +9,15 @@ import style from './styles.module.scss'
 const Header = () => {
   return (
     <header className={style.header}>
-      <Hamburger />
-      <Logo />
-      <HeaderList />
-      <LoginPanel />
-      <div className={style.mobileActions}>
-        <FavoritesButton />
-        <CartButton />
+      <div className={style.inner}>
+        <Hamburger />
+        <Logo />
+        <HeaderList />
+        <LoginPanel />
+        <div className={style.mobileActions}>
+          <FavoritesButton />
+          <CartButton />
+        </div>
       </div>
     </header>
   )
