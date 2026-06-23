@@ -1,0 +1,1 @@
+import{i as e}from"./index-1asbHD1F.js";var t=()=>e();export{t};

@@ -1,4 +1,4 @@
-import { t as LANG_STORAGE_KEY } from "./i18n-YBkKxQG2.js";
+import { t as LANG_STORAGE_KEY } from "./i18n-mFK9df7g.js";
 import { t as useAuth } from "./useAuth-2preQRNU.js";
 import { t as FormField } from "./FormField-CiTDrUGt.js";
 import { useEffect, useRef, useState } from "react";
@@ -319,6 +319,7 @@ var style_module_default$3 = {
 //#endregion
 //#region src/components/ui/AuthModal/components/LoginForm/index.tsx
 var LoginForm = ({ onSuccess }) => {
+	const { t } = useTranslation("common");
 	const { login } = useAuth();
 	const navigate = useNavigate();
 	const [email, setEmail] = useState("");
@@ -335,7 +336,7 @@ var LoginForm = ({ onSuccess }) => {
 			navigate({ to: "/welcome" });
 		} catch (err) {
 			const message = err?.response?.data?.message;
-			setError(message ?? "Nieprawidłowy email lub hasło");
+			setError(message ?? t("auth.form.errorFallback"));
 		} finally {
 			setIsLoading(false);
 		}
@@ -346,7 +347,7 @@ var LoginForm = ({ onSuccess }) => {
 		noValidate: true,
 		children: [
 			/* @__PURE__ */ jsx(FormField, {
-				label: "Email",
+				label: t("auth.form.email"),
 				name: "email",
 				type: "email",
 				value: email,
@@ -354,7 +355,7 @@ var LoginForm = ({ onSuccess }) => {
 				required: true
 			}),
 			/* @__PURE__ */ jsx(FormField, {
-				label: "Hasło",
+				label: t("auth.form.password"),
 				name: "password",
 				type: "password",
 				value: password,
@@ -364,7 +365,7 @@ var LoginForm = ({ onSuccess }) => {
 			/* @__PURE__ */ jsx("button", {
 				type: "button",
 				className: style_module_default$3.resetLink,
-				children: "link do resetu hasła"
+				children: t("auth.form.resetLink")
 			}),
 			error && /* @__PURE__ */ jsx("p", {
 				className: style_module_default$3.error,
@@ -375,7 +376,7 @@ var LoginForm = ({ onSuccess }) => {
 				type: "submit",
 				className: style_module_default$3.submit,
 				disabled: isLoading,
-				children: isLoading ? "Logowanie..." : "ZALOGUJ SIĘ"
+				children: isLoading ? t("auth.form.submitting") : t("auth.form.submit")
 			})
 		]
 	});
@@ -394,6 +395,7 @@ var style_module_default$2 = {
 //#endregion
 //#region src/components/ui/AuthModal/index.tsx
 var AuthModal = ({ onClose }) => {
+	const { t } = useTranslation("common");
 	const [activeTab, setActiveTab] = useState("login");
 	const overlayRef = useRef(null);
 	useEffect(() => {
@@ -419,13 +421,13 @@ var AuthModal = ({ onClose }) => {
 				/* @__PURE__ */ jsx("button", {
 					className: style_module_default$2.close,
 					onClick: onClose,
-					"aria-label": "Zamknij",
+					"aria-label": t("auth.modal.close"),
 					children: /* @__PURE__ */ jsx(X, { size: 20 })
 				}),
 				/* @__PURE__ */ jsx("h2", {
 					className: style_module_default$2.title,
 					id: "auth-modal-title",
-					children: "LOGOWANIE"
+					children: t("auth.modal.title")
 				}),
 				/* @__PURE__ */ jsxs("div", {
 					className: style_module_default$2.tabs,
@@ -435,20 +437,20 @@ var AuthModal = ({ onClose }) => {
 						"aria-selected": activeTab === "register",
 						className: `${style_module_default$2.tab} ${activeTab === "register" ? style_module_default$2.tabActive : ""}`,
 						onClick: () => setActiveTab("register"),
-						children: "Załóż konto"
+						children: t("auth.modal.createAccount")
 					}), /* @__PURE__ */ jsx("button", {
 						role: "tab",
 						"aria-selected": activeTab === "login",
 						className: `${style_module_default$2.tab} ${activeTab === "login" ? style_module_default$2.tabActive : ""}`,
 						onClick: () => setActiveTab("login"),
-						children: "Zaloguj się"
+						children: t("auth.modal.signIn")
 					})]
 				}),
 				/* @__PURE__ */ jsx("div", {
 					className: style_module_default$2.content,
 					children: activeTab === "login" ? /* @__PURE__ */ jsx(LoginForm, { onSuccess: onClose }) : /* @__PURE__ */ jsx("p", {
 						className: style_module_default$2.empty,
-						children: "Rejestracja — wkrótce"
+						children: t("auth.modal.registrationComing")
 					})
 				})
 			]

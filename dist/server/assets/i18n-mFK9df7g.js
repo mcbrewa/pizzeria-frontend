@@ -24,6 +24,23 @@ var common_default$2 = {
 		"orderOnline": "ZAMÓW ONLINE",
 		"menuAndPromos": "MENU I PROMOCJE"
 	} },
+	auth: {
+		"modal": {
+			"title": "LOGOWANIE",
+			"close": "Zamknij",
+			"createAccount": "Załóż konto",
+			"signIn": "Zaloguj się",
+			"registrationComing": "Rejestracja — wkrótce"
+		},
+		"form": {
+			"email": "Email",
+			"password": "Hasło",
+			"resetLink": "link do resetu hasła",
+			"submit": "ZALOGUJ SIĘ",
+			"submitting": "Logowanie...",
+			"errorFallback": "Nieprawidłowy email lub hasło"
+		}
+	},
 	notFoundPage: {
 		"title": "Ta strona jest jeszcze w budowie",
 		"subtitle": "Wróć wkrótce!"
@@ -74,6 +91,23 @@ var common_default$1 = {
 		"orderOnline": "ORDER ONLINE",
 		"menuAndPromos": "MENU & PROMOTIONS"
 	} },
+	auth: {
+		"modal": {
+			"title": "SIGN IN",
+			"close": "Close",
+			"createAccount": "Create account",
+			"signIn": "Sign in",
+			"registrationComing": "Registration — coming soon"
+		},
+		"form": {
+			"email": "Email",
+			"password": "Password",
+			"resetLink": "password reset link",
+			"submit": "SIGN IN",
+			"submitting": "Signing in...",
+			"errorFallback": "Invalid email or password"
+		}
+	},
 	notFoundPage: {
 		"title": "This page is still under construction",
 		"subtitle": "Come back soon!"
@@ -124,6 +158,23 @@ var common_default = {
 		"orderOnline": "ONLINE BESTELLEN",
 		"menuAndPromos": "MENÜ & AKTIONEN"
 	} },
+	auth: {
+		"modal": {
+			"title": "ANMELDUNG",
+			"close": "Schließen",
+			"createAccount": "Konto erstellen",
+			"signIn": "Anmelden",
+			"registrationComing": "Registrierung — demnächst"
+		},
+		"form": {
+			"email": "E-Mail",
+			"password": "Passwort",
+			"resetLink": "Passwort zurücksetzen",
+			"submit": "ANMELDEN",
+			"submitting": "Anmeldung...",
+			"errorFallback": "Ungültige E-Mail oder falsches Passwort"
+		}
+	},
 	notFoundPage: {
 		"title": "Diese Seite ist noch im Aufbau",
 		"subtitle": "Komm bald wieder!"
