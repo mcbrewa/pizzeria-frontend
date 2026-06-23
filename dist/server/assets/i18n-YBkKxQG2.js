@@ -24,6 +24,10 @@ var common_default$2 = {
 		"orderOnline": "ZAMÓW ONLINE",
 		"menuAndPromos": "MENU I PROMOCJE"
 	} },
+	notFoundPage: {
+		"title": "Ta strona jest jeszcze w budowie",
+		"subtitle": "Wróć wkrótce!"
+	},
 	orderPanel: {
 		"back": "Wróć",
 		"greeting": "Witaj {{name}}!",
@@ -70,6 +74,10 @@ var common_default$1 = {
 		"orderOnline": "ORDER ONLINE",
 		"menuAndPromos": "MENU & PROMOTIONS"
 	} },
+	notFoundPage: {
+		"title": "This page is still under construction",
+		"subtitle": "Come back soon!"
+	},
 	orderPanel: {
 		"back": "Back",
 		"greeting": "Welcome {{name}}!",
@@ -116,6 +124,10 @@ var common_default = {
 		"orderOnline": "ONLINE BESTELLEN",
 		"menuAndPromos": "MENÜ & AKTIONEN"
 	} },
+	notFoundPage: {
+		"title": "Diese Seite ist noch im Aufbau",
+		"subtitle": "Komm bald wieder!"
+	},
 	orderPanel: {
 		"back": "Zurück",
 		"greeting": "Willkommen {{name}}!",
