@@ -1,0 +1,31 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.code {
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--destructive);
+  margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 7rem;
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.subtitle {
+  color: var(--muted-foreground);
+}

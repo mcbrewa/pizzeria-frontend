@@ -24,6 +24,10 @@
       "menuAndPromos": "MENU I PROMOCJE"
     }
   },
+  "notFoundPage": {
+    "title": "Ta strona jest jeszcze w budowie",
+    "subtitle": "Wróć wkrótce!"
+  },
   "orderPanel": {
     "back": "Wróć",
     "greeting": "Witaj {{name}}!",
