@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import LoginForm from './components/LoginForm'
 import styles from './style.module.scss'
 
@@ -10,6 +11,7 @@ interface AuthModalProps {
 }
 
 const AuthModal = ({ onClose }: AuthModalProps) => {
+  const { t } = useTranslation('common')
   const [activeTab, setActiveTab] = useState<Tab>('login')
   const overlayRef = useRef<HTMLDivElement>(null)
 
@@ -37,12 +39,12 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
         aria-modal="true"
         aria-labelledby="auth-modal-title"
       >
-        <button className={styles.close} onClick={onClose} aria-label="Zamknij">
+        <button className={styles.close} onClick={onClose} aria-label={t('auth.modal.close')}>
           <X size={20} />
         </button>
 
         <h2 className={styles.title} id="auth-modal-title">
-          LOGOWANIE
+          {t('auth.modal.title')}
         </h2>
 
         <div className={styles.tabs} role="tablist">
@@ -52,7 +54,7 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
             className={`${styles.tab} ${activeTab === 'register' ? styles.tabActive : ''}`}
             onClick={() => setActiveTab('register')}
           >
-            Załóż konto
+            {t('auth.modal.createAccount')}
           </button>
           <button
             role="tab"
@@ -60,7 +62,7 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
             className={`${styles.tab} ${activeTab === 'login' ? styles.tabActive : ''}`}
             onClick={() => setActiveTab('login')}
           >
-            Zaloguj się
+            {t('auth.modal.signIn')}
           </button>
         </div>
 
@@ -68,7 +70,7 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
           {activeTab === 'login' ? (
             <LoginForm onSuccess={onClose} />
           ) : (
-            <p className={styles.empty}>Rejestracja — wkrótce</p>
+            <p className={styles.empty}>{t('auth.modal.registrationComing')}</p>
           )}
         </div>
       </div>

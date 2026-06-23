@@ -24,6 +24,23 @@
       "menuAndPromos": "MENÜ & AKTIONEN"
     }
   },
+  "auth": {
+    "modal": {
+      "title": "ANMELDUNG",
+      "close": "Schließen",
+      "createAccount": "Konto erstellen",
+      "signIn": "Anmelden",
+      "registrationComing": "Registrierung — demnächst"
+    },
+    "form": {
+      "email": "E-Mail",
+      "password": "Passwort",
+      "resetLink": "Passwort zurücksetzen",
+      "submit": "ANMELDEN",
+      "submitting": "Anmeldung...",
+      "errorFallback": "Ungültige E-Mail oder falsches Passwort"
+    }
+  },
   "notFoundPage": {
     "title": "Diese Seite ist noch im Aufbau",
     "subtitle": "Komm bald wieder!"

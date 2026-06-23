@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from '@tanstack/react-router'
+import { useTranslation } from 'react-i18next'
 import FormField from '#/components/ui/FormField'
 import { useAuth } from '#/hooks/useAuth'
 import styles from './style.module.scss'
@@ -9,6 +10,7 @@ interface LoginFormProps {
 }
 
 const LoginForm = ({ onSuccess }: LoginFormProps) => {
+  const { t } = useTranslation('common')
   const { login } = useAuth()
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
@@ -28,7 +30,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
     } catch (err: unknown) {
       const axiosError = err as { response?: { data?: { message?: string } } }
       const message = axiosError?.response?.data?.message
-      setError(message ?? 'Nieprawidłowy email lub hasło')
+      setError(message ?? t('auth.form.errorFallback'))
     } finally {
       setIsLoading(false)
     }
@@ -37,7 +39,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
   return (
     <form className={styles.form} onSubmit={handleSubmit} noValidate>
       <FormField
-        label="Email"
+        label={t('auth.form.email')}
         name="email"
         type="email"
         value={email}
@@ -45,7 +47,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
         required
       />
       <FormField
-        label="Hasło"
+        label={t('auth.form.password')}
         name="password"
         type="password"
         value={password}
@@ -54,13 +56,13 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
       />
 
       <button type="button" className={styles.resetLink}>
-        link do resetu hasła
+        {t('auth.form.resetLink')}
       </button>
 
       {error && <p className={styles.error} role="alert">{error}</p>}
 
       <button type="submit" className={styles.submit} disabled={isLoading}>
-        {isLoading ? 'Logowanie...' : 'ZALOGUJ SIĘ'}
+        {isLoading ? t('auth.form.submitting') : t('auth.form.submit')}
       </button>
     </form>
   )

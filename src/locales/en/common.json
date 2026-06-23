@@ -24,6 +24,23 @@
       "menuAndPromos": "MENU & PROMOTIONS"
     }
   },
+  "auth": {
+    "modal": {
+      "title": "SIGN IN",
+      "close": "Close",
+      "createAccount": "Create account",
+      "signIn": "Sign in",
+      "registrationComing": "Registration — coming soon"
+    },
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "resetLink": "password reset link",
+      "submit": "SIGN IN",
+      "submitting": "Signing in...",
+      "errorFallback": "Invalid email or password"
+    }
+  },
   "notFoundPage": {
     "title": "This page is still under construction",
     "subtitle": "Come back soon!"

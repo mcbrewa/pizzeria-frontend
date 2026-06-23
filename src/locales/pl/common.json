@@ -24,6 +24,23 @@
       "menuAndPromos": "MENU I PROMOCJE"
     }
   },
+  "auth": {
+    "modal": {
+      "title": "LOGOWANIE",
+      "close": "Zamknij",
+      "createAccount": "Załóż konto",
+      "signIn": "Zaloguj się",
+      "registrationComing": "Rejestracja — wkrótce"
+    },
+    "form": {
+      "email": "Email",
+      "password": "Hasło",
+      "resetLink": "link do resetu hasła",
+      "submit": "ZALOGUJ SIĘ",
+      "submitting": "Logowanie...",
+      "errorFallback": "Nieprawidłowy email lub hasło"
+    }
+  },
   "notFoundPage": {
     "title": "Ta strona jest jeszcze w budowie",
     "subtitle": "Wróć wkrótce!"
